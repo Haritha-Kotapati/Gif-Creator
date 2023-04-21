@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gif Creator</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gif.js/dist/gif.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.worker.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Hello there, Hi</h1>
+    <h3>Let's create a gif from the series of same frames by filling different colors to it.</h3>
+    <h2>Let Go!</h2>
+    <div>
+        <button class="tab active" onclick="openTab(event, 'tab1')">Square</button>
+        <button class="tab" onclick="openTab(event, 'tab2')">Circle</button>
+    </div>
+
+    <div id="tab1" class="tab-content" style="display: block;">
+        <h2>Square</h2>
+
+        <!-- CODE -->
+      
+        <div class="pattern">
+        <div class="square" id="square-1">
+            <div class="inner-square-1" id="inner-square-1">
+                <div class="inner-square-2" id="inner-inner-square-1" ></div>
+            </div>
+            <label for="color-picker-1">Choose a color for a Square</label>
+            <input type="color" id="color-picker-1">
+            <br><br>
+            <button onclick="changeColor('square-1')">Outer square</button>
+            <button onclick="changeColor('inner-square-1')">Inner Square</button>
+            <button onclick="changeColor('inner-inner-square-1')">Inner Square 2</button>
+            
+        </div>
+
+        <div class="square" id="square-2">
+            <div class="inner-square-1" id="inner-square-2">
+                <div class="inner-square-2" id="inner-inner-square-2" ></div>
+            </div>
+            <label for="color-picker-2">Choose a color for a Square</label>
+            <input type="color" id="color-picker-2">
+            <br><br>
+            <button onclick="changeColor('square-2')">Outer square</button>
+            <button onclick="changeColor('inner-square-2')">Inner Square</button>
+            <button onclick="changeColor('inner-inner-square-2')">Inner Square 2</button>
+            <!-- <button onclick="saveImage('square-2')">Save Image</button> -->
+        </div>
+
+        <div class="square" id="square-3">
+            <div class="inner-square-1" id="inner-square-3">
+                <div class="inner-square-2" id="inner-inner-square-3" ></div>
+            </div>
+            <label for="color-picker-3">Choose a color for a Square</label>
+            <input type="color" id="color-picker-3">
+            <br><br>
+            <button onclick="changeColor('square-3')">Outer square</button>
+            <button onclick="changeColor('inner-square-3')">Inner Square</button>
+            <button onclick="changeColor('inner-inner-square-3')">Inner Square 2</button>
+            <!-- <button onclick="saveImage('square-3')">Save Image</button> -->
+        </div>
+
+        <button id="previewBtn">Preview</button>
+        <div id="gif-preview"></div>
+    </div>
+    
+    <img id="myGif" />
+ 
+    <div id="tab2" class="tab-content">
+        <h2>Circle</h2>
+        <canvas id="canvas" width="1000" height="100"></canvas>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+.pattern{
+    display: flex;
+}
+
+.square {
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    
+    display: grid;
+}
+.inner-square-1 {
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    margin: 25px;
+}
+.inner-square-2 {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    margin: 25px;
+}
