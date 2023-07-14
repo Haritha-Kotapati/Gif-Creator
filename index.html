@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <title>Create GIF from Squares</title>
   <link rel="stylesheet" href="styles.css">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-QXW03635H9"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-QXW03635H9');
+  </script>
 </head>
+
 <body>
   <h1>Let's Create Amazing GIFs!</h1>
-    <p>Transform your squares into animated masterpieces.</p>
+  <p>Transform your squares into animated masterpieces.</p>
   <div class="container">
-    
+
     <div class="square" id="square1" onclick="openColorPicker('square1')"></div>
     <div class="square" id="square2" onclick="openColorPicker('square2')"></div>
     <div class="square" id="square3" onclick="openColorPicker('square3')"></div>
@@ -28,4 +39,5 @@
   <script src="script.js"></script>
 
 </body>
+
 </html>
