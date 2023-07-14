@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create GIF from Squares</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <h1>Let's Create Amazing GIFs!</h1>
+    <p>Transform your squares into animated masterpieces.</p>
+  <div class="container">
+    
+    <div class="square" id="square1" onclick="openColorPicker('square1')"></div>
+    <div class="square" id="square2" onclick="openColorPicker('square2')"></div>
+    <div class="square" id="square3" onclick="openColorPicker('square3')"></div>
+
+  </div>
+
+  <div class="button-container">
+    <button onclick="saveAsGif()">Save as GIF</button>
+  </div>
+
+  <div id="gif-preview"></div>
+  <a href="#" id="download-link">Download GIF</a>
+
+  <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gif.js/0.2.0/gif.js"></script>
+  <script src="gif.worker.js"></script>
+  <script src="script.js"></script>
+
+</body>
+</html>
